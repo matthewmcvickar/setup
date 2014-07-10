@@ -7,6 +7,14 @@ echo "Hello there, Matthew! Let’s get to work!"
 ###
 
 echo " "
+echo "▶️ Clearing out your Dock and emptying ~/Downloads."
+defaults write com.apple.dock persistent-apps -array ""
+cd ~/Downloads
+rm 'About Downloads.pdf'
+
+###
+
+echo " "
 echo "▶️ Installing Homebrew."
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
