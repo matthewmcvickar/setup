@@ -16,7 +16,7 @@ echo "👉 Clearing out your Dock and emptying ~/Downloads."
 defaults write com.apple.dock persistent-apps -array ""
 killall Dock
 cd ~/Downloads
-rm About\ Downloads.lpdf
+rm -rf About\ Downloads.lpdf
 
 ###
 
@@ -47,10 +47,9 @@ echo " "
 echo "👉 Creating a new SSH key."
 
 # Generate key.
-ssh-keygen -t rsa -C "matthew@matthewmcvickar.com"
+ssh-keygen -t rsa -C "matthew@matthewmcvickar.com" && eval "$(ssh-agent -s)"
 
 # Add key to ssh-agent.
-eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
 
 # Copy to Clipboard for adding to Github.
@@ -64,7 +63,7 @@ open "https://github.com/settings/ssh"
 
 # Test it.
 confirm "All set?" && echo "Testing GitHub connectivity now."
-ssh -T git@github.com
+ssh -T git@github.com && echo "\n\n👍 Great! Let’s move on."
 
 ###
 
