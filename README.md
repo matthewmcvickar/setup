@@ -22,7 +22,7 @@ This is currently an incomplete and messy work in progress.
 1. Log in as that user for the first time. Click through dialogs. OS X starts.
 
 
-### 2. Run Initilization Script
+### 2. Run Initialization Script
 
 1. Go here. **[github.com/matthewmcvickar/setup](http://github.com/matthewmcvickar/setup)**
 
