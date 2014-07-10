@@ -17,6 +17,8 @@ This is currently an incomplete and messy work in progress.
     **Password:** ಠ_ಠ  
     **Password Hint:** (none)
 
+1. Make that user an administrator. This is necessary.
+
 1. Log in as that user for the first time. Click through dialogs. OS X starts.
 
 
@@ -34,15 +36,16 @@ This is currently an incomplete and messy work in progress.
 
     This does the following:
 
+    - Removes all icons from the Dock.
     - Installs Homebrew.
-    - Sets up [dotfiles](http://github.com/matthewmcvickar/dotfiles).
     - Sets up `~/Sites` directory structure.
     - Installs and configures Git.
-    - Creates a new SSH key.
+    - Creates a new SSH key and aids in adding it to GitHub.
+    - Sets up [dotfiles](http://github.com/matthewmcvickar/dotfiles).
     - Installs Homebrew command line apps from Brewfile.
     - Installs Homebrew Cask desktop apps from Caskfile.
-    - Installs Sublime Text command line tool.
-    - Fixes permissions on `/usr/local/` to avoid problems with `sudo` and NPM.
+    - Configures Sublime Text and adds its command line tool.
+    - Fixes permissions on `/usr/local/` and `~/.npm` to avoid problems with `sudo` and NPM.
     - Installs Grunt.
     - Installs Bower.
     - Installs the SASS gem and Node's libsass globally.
@@ -103,6 +106,8 @@ Launch the App Store, sign in, and go the Purchase tab to find these apps.
 ## Full Setup
 
 When you are doing more than just working on the machine.
+
+**NOTE: This section is *very* much incomplete. See the [OS X Defaults](OS X Defaults.md) document for more notes.**
 
 
 ### Install Apps from Mac App Store
