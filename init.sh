@@ -113,11 +113,9 @@ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
 rm -r User
 ln -s ~/Sites/matthewmcvickar/sublime-text-preferences/ User
 
-echo " "
-echo "⚠ Now you have to fix SASS highlighting in Sublime Text. Delete line 8 in the file that opens."
-
-open ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Rails/Ruby\ Haml.tmLanguage
-confirm "All set?" && echo "OK!"
+# Fix SASS highlighting in Sublime Text. Remove SASS from the array of file
+# types in the Ruby HAML language configuration file.
+sed -i '' '/<string>sass<\/string>/d' ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Rails/Ruby\ Haml.tmLanguage
 
 ###
 
