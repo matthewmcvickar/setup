@@ -52,7 +52,7 @@ Useful perhaps only to me, but I encourage poking around and forking.
 
 Unfortunately, there is no way to automate downloading these.
 
-Launch the App Store, sign in, and go the Purchase tab to find these apps.
+Launch the App Store, sign in, and go the Purchases tab to find these apps.
 
 - Divvy
 - xScope
