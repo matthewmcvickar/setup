@@ -165,6 +165,19 @@ To be merged into my dotfiles' `.osx` file.
 - show mini app icon in menu bar
 - lock after computer is idle for 15 minutes
 
+    
+### Adobe Creative Cloud
+
+- do not launch at startup
+- do not run in the background
+
+    
+### Adobe Photoshop
+
+- **⌘K**: Image →  Crop
+- **⌘⇧T**: Edit → Trim
+- **Default units:** px
+
 
 ### Caffeine
 
@@ -220,11 +233,10 @@ To be merged into my dotfiles' `.osx` file.
 - start at login
 
     
-## Photoshop
+### Microsoft Office
 
-- **⌘K**: Image →  Crop
-- **⌘⇧T**: Edit → Trim
-- **Default units:** px
+- do not launch at startup
+- do not run in the background
 
 
 ### Skype

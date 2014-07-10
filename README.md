@@ -174,11 +174,7 @@ Copy to new home folder:
 ### MS Office
 
 - [Download MS Office 2011 from subscription site, sign in.](http://office.microsoft.com/en-us/home-premium/)
-- Settings:
-    - Do not launch at login.
 
 ### Adobe Creative Cloud
 
 - [Download Creative Cloud](http://www.adobe.com/products/creativecloud.html)
-- Settings:
-    - Do not launch at login.
