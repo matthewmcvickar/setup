@@ -41,7 +41,7 @@ Useful perhaps only to me, but I encourage poking around and forking.
     - Installs Homebrew command line apps from Brewfile.
     - Installs Homebrew Cask desktop apps from Caskfile.
     - Configures Sublime Text and adds its command line tool.
-    - Fixes permissions on `/usr/local/` and `~/.npm` to avoid problems with `sudo` and NPM.
+    - Fixes permissions on `/usr/local/` and `~/.npm` to avoid problems with `sudo` and Node.
     - Installs Grunt.
     - Installs Bower.
     - Installs the SASS gem and Node's libsass globally.
