@@ -14,7 +14,7 @@ This is currently an incomplete and messy work in progress.
 
     **Full Name:** Matthew McVickar  
     **Account Name:** (automatic, probably 'matthewmcvickar')  
-    **Password:** ಠ_ಠ
+    **Password:** ಠ_ಠ  
     **Password Hint:** (none)
 
 1. Log in as that user for the first time. Click through dialogs. OS X starts.
