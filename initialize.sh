@@ -2,32 +2,41 @@
 
 # This script sets up the basics for a development environment on a new computer.
 
-echo "Hello there, Matthew! Let’s get to work!"
+echo "😃 Hello there, Matthew! Let’s get to work!"
+echo " "
+echo "First I need sudo privileges."
+
+sudo -v
 
 ###
 
 echo " "
-echo "▶️ Clearing out your Dock and emptying ~/Downloads."
+echo "👉 Clearing out your Dock and emptying ~/Downloads."
+
 defaults write com.apple.dock persistent-apps -array ""
+killall Dock
 cd ~/Downloads
-rm 'About Downloads.pdf'
+rm About\ Downloads.lpdf
 
 ###
 
 echo " "
-echo "▶️ Installing Homebrew."
+echo "👉 Installing Homebrew."
+
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 
 ###
 
 echo " "
-echo "▶️ Setting up ~/Sites folder structure."
+echo "👉 Setting up ~/Sites folder structure."
+
 mkdir ~/Sites ~/Sites/matthewmcvickar ~/Sites/work ~/Sites/sandbox
 
 ###
 
 echo " "
-echo "▶️ Installing and configuring Git."
+echo "👉 Installing and configuring Git."
+
 brew install git
 git config --global user.email "matthew@matthewmcvickar.com"
 git config --global user.name "Matthew McVickar"
@@ -35,7 +44,7 @@ git config --global user.name "Matthew McVickar"
 ###
 
 echo " "
-echo "▶️ Creating a new SSH key."
+echo "👉 Creating a new SSH key."
 
 # Generate key.
 ssh-keygen -t rsa -C "matthew@matthewmcvickar.com"
@@ -60,78 +69,94 @@ ssh -T git@github.com
 ###
 
 echo " "
-echo "▶️ Fetching dotfiles and configuring Bash profile."
+echo "👉 Fetching dotfiles and configuring Bash profile."
+
 cd ~/Sites/matthewmcvickar
 git clone https://github.com/matthewmcvickar/dotfiles.git
 cd dotfiles
 bash ~/Sites/matthewmcvickar/dotfiles/build_dotfiles.sh --force
 
 echo " "
-echo "▶️ Reloading shell."
+echo "👉 Reloading shell."
+
 source ~/.bash_profile
 
 ###
 
 echo " "
-echo "▶️ Installing command-line apps with Homebrew."
+echo "👉 Installing command-line apps with Homebrew."
+
 brew bundle Brewfile
 
 ###
 
 echo " "
-echo "▶️ Installing OS X desktops apps with Homebrew Cask."
+echo "👉 Installing OS X desktops apps with Homebrew Cask."
+
 brew bundle Caskfile
 
 ###
 
 echo " "
-echo "▶️ Linking Homebrew Cask to Alfred."
+echo "👉 Linking Homebrew Cask to Alfred."
+
 brew cask alfred link
 
 ###
 
 echo " "
-echo "▶️ Configuring Sublime Text."
+echo "👉 Configuring Sublime Text."
+
 git clone git@github.com:matthewmcvickar/sublime-text-preferences.git
 cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
 rm -r User
 ln -s ~/Sites/matthewmcvickar/sublime-text-preferences/ User
 
 echo " "
-echo "Now you have to fix SASS highlighting in Sublime Text. Delete line 8 in the file that opens."
+echo "⚠ Now you have to fix SASS highlighting in Sublime Text. Delete line 8 in the file that opens."
+
 open ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Rails/Ruby\ Haml.tmLanguage
 confirm "All set?" && echo "OK!"
 
 ###
 
 echo " "
-echo "▶️ Installing Sublime Text command line tool (subl)."
+echo "👉 Installing Sublime Text command line tool (subl)."
+
 ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 ###
 
 echo " "
-echo "▶️ Giving you ownership of `/usr/local` so you don't have to `sudo` NPM commands."
+echo "👉 Giving you ownership of `/usr/local` so you don’t have to `sudo` NPM commands."
+
 sudo chown -R `whoami` ~/.npm
 sudo chown -R `whoami` /usr/local/lib/node_modules
 
 ###
 
 echo " "
-echo "▶️ Installing Grunt and Bower."
+echo "👉 Installing Grunt and Bower."
+
 npm install -g grunt-cli
 npm install -g bower
 
 ###
 
 echo " "
-echo "▶️ Installing SASS Gem and libsass for Node."
+echo "👉 Installing SASS Gem and libsass for Node."
+
 gem install sass
 npm install -g node-sass
 
 ###
 
-echo "▶️ Setting OS X defaults. This wil require restart"
+echo "👉 Setting OS X defaults. This will require restart."
+
 cd ~/Sites/matthewmcvickar/dotfiles/
 bash ./.osx
 
+echo "🎉 You’re all done!"
+echo " "
+echo "Now restart your computer and follow the rest of the instructions at \
+https://github.com/matthewmcvickar/setup."
