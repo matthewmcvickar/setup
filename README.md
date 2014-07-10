@@ -26,10 +26,10 @@ This is currently an incomplete and messy work in progress.
 
 1. Open Terminal.
 
-1. Copy, paste, and run this script.
+1. Copy, paste, and run [the initialization script](init.sh).
 
     ```sh
-    curl -s https://raw.githubusercontent.com/matthewmcvickar/setup/master/initialize.sh | bash
+    curl -s https://raw.githubusercontent.com/matthewmcvickar/setup/master/init.sh | bash
     ```
 
     This does the following:
