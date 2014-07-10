@@ -1,6 +1,6 @@
 # Setup
 
-Get a laptop up and running. A work in progress.
+Useful perhaps only to me, but I encourage poking around and forking.
 
 
 ## Quick-start Development Environment
