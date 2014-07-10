@@ -1,10 +1,7 @@
 # Setup
 
-Get a laptop up and running.
+Get a laptop up and running. A work in progress.
 
-This is currently an incomplete and messy work in progress.
-
----
 
 ## Quick-start Development Environment
 
