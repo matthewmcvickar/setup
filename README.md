@@ -8,40 +8,66 @@ This is currently an incomplete and messy work in progress.
 
 ## Quick-start Development Environment
 
-### Create a User
+### 1. Create a User
 
 1. Log into the machine as an administrator and make a new user in the *Users & Groups* preference panel:
 
     **Full Name:** Matthew McVickar  
     **Account Name:** (automatic, probably 'matthewmcvickar')  
-    **Password:** ( ͡° ͜ʖ ͡°)  
+    **Password:** ಠ_ಠ
     **Password Hint:** (none)
 
 1. Log in as that user for the first time. Click through dialogs. OS X starts.
 
 
-## Initial Downloads
+### 2. Run Initilization Script
 
-1. Open Spotlight and launch AppleScript Editor. Open 'Setup.scpt' in the iCloud document list. Run the script. This downloads iTerm2, Sublime Text 2, NodeJS, and Chrome.
+1. Go here. **[github.com/matthewmcvickar/setup](http://github.com/matthewmcvickar/setup)**
 
-1. When they are finished downloading, re-run the script. This creates `~/Applications` and moves into it any already-compiled `.app`s.
+1. Run the script.
 
-1. Close the script; it's done with what it needed to do.
+    ```sh
+    $ bash eval "$(curl -fsSL https://raw.githubusercontent.com/matthewmcvickar/setup/master/initialize.sh")
+    ```
 
-1. Open all the installers and complete them.
+    This script does the following:
 
-1. Delete everything in the ~/Downloads folder.
+    - Installs Homebrew.
+    - Sets up [dotfiles](http://github.com/matthewmcvickar/dotfiles).
+    - Sets up `~/Sites` directory structure.
+    - Installs and configures Git.
+    - Creates a new SSH key.
+    - Installs Homebrew command line apps from Brewfile.
+    - Installs Homebrew Cask desktop apps from Caskfile.
+    - Installs Sublime Text command line tool.
+    - Fixes permissions on `/usr/local/` to avoid problems with `sudo` and NPM.
+    - Installs Grunt.
+    - Installs Bower.
+    - Installs the SASS gem and Node's libsass globally.
+    - Sets OS X defaults.
 
-1. Open App Store. Sign in. Download Divvy, which should be loaded there already.
+
+### 3. Install Mac App Store Apps
+
+Unfortunately, there is no way to automate downloading these.
+
+Launch the App Store, sign in, and go the Purchase tab to find these apps.
+
+- Divvy
+- xScope
+- LiveReload
+- Patterns
 
 
-### Configure Desktop Apps
+### 4. Configure Desktop Apps
 
-1. Open 1Password and tell it to sync via iCloud.
+1. **1Password**: Open preferences and set sync to iCloud.
 
-1. Open Alfred and tell it to sync to `~/Library/Mobile Documents/`.
+1. **Alfred**: Open preferences and set sync to `~/Library/Mobile Documents/`.
 
-1. Symlink TextExpander preferences to iCloud version:
+1. **iTerm**: Open preferences and set sync to `~/Library/Mobile Documents/`.
+
+1. **TextExpander**: Symlink preferences to iCloud version:
 
     ```sh
     $ cd ~/Library/Application\ Support/TextExpander/
@@ -49,9 +75,7 @@ This is currently an incomplete and messy work in progress.
     $ ln -s ~/Library/Mobile\ Documents/Settings.textexpander
     ```
 
-1. Start up TextExpander.
-
-1. Symlink Divvy preferences to iCloud version:
+1. **Divvy**: Symlink preferences to iCloud version:
 
     ```sh
     $ cd ~/Library/Preferences
@@ -59,87 +83,10 @@ This is currently an incomplete and messy work in progress.
     $ ln -s ~/Library/Mobile\ Documents/com.mizage.Divvy.plist
     ```
 
-1. Start up Divvy.
 
+## 5. Further Configure Development Environment
 
-## Configure Development Environment
-
-1. Open iTerm and tell it to sync to `~/Library/Mobile Documents/`.
-
-1. [Import Sublime Text preferences.](https://github.com/matthewmcvickar/sublime-text-preferences)
-
-1. Set up Sublime Text command line tool:
-    
-    ```sh
-    $ ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
-    ```  
-
-1. Install Homebrew:
-
-    ```sh
-    $ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-    ```
-
-1. Install Git:
-
-    ```sh
-    $ brew install  git
-    ```
-
-1. Configure Git commands:
-
-    ```sh
-    $ git config --global user.email "[my email]"
-    $ git config --global user.name "Matthew McVickar"
-    ```
-    
-- [Generate a new SSH key and add it to GitHub.](https://help.github.com/articles/generating-ssh-keys)
-
-- Grab my dotfiles and run them:
-
-    ```sh
-    $ git clone git@github.com:matthewmcvickar/dotfiles.git
-    $ bash ~/Sites/matthewmcvickar/dotfiles/build_dotfiles.sh --force
-    ```
-
-- Run Homebrew installation:
-
-    ```sh
-    bash ~/Sites/matthewmcvickar/dotfiles/.brew
-    ```
-
-- Run OS X configuration:
-
-    ```sh
-    bash ~/Sites/matthewmcvickar/dotfiles/.osx
-    ```
-
-- Give myself ownership of `/usr/local` so that I don't have to `sudo` NPM commands:
-
-    ```sh
-    $ sudo chown -R `whoami` ~/.npm
-    $ sudo chown -R `whoami` /usr/local/lib/node_modules
-    ```
-
-- Install Grunt:
-
-    ```sh
-    $ npm install -g grunt-cli
-    ```
-    
-- Install Bower:
-    
-    ```sh
-    $ npm install -g bower
-    ```
-    
-- Install SASS:
-
-    ```sh
-    $ sudo gem install sass
-    ```
-
-- Install Ruby:
+- If you need to install Ruby:
 
     ```sh
     $ rbenv install 1.9.3-p484
@@ -151,7 +98,22 @@ This is currently an incomplete and messy work in progress.
 ---
 
 
-## Manual Setup
+## Full Setup
+
+When you are doing more than just working on the machine.
+
+
+### Install Apps from Mac App Store
+
+There is no way to automate this.
+
+- Fantastical
+- ByWord
+- Day One
+- Joystick Mapper
+- Melo
+- MsgFiler
+
 
 ### Home Folder
 
@@ -167,13 +129,16 @@ Copy to new home folder:
   - Public
   - Scripts
   
+
 ### iPhoto
 
 - Launch iPhoto while holding ⌥. Select iPhoto library on ‘Portable’ disk.
 
+
 ### MS Office
 
 - [Download MS Office 2011 from subscription site, sign in.](http://office.microsoft.com/en-us/home-premium/)
+
 
 ### Adobe Creative Cloud
 
