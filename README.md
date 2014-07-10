@@ -12,7 +12,7 @@ Useful perhaps only to me, but I encourage poking around and forking.
     **Full Name:** Matthew McVickar  
     **Account Name:** (automatic, probably 'matthewmcvickar')  
     **Password:** ಠ_ಠ  
-    **Password Hint:** (none)
+    **Password Hint:** ┐( ˘_˘)┌
 
 1. Make that user an administrator. This is necessary.
 
