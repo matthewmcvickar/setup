@@ -24,13 +24,15 @@ This is currently an incomplete and messy work in progress.
 
 1. Go here. **[github.com/matthewmcvickar/setup](http://github.com/matthewmcvickar/setup)**
 
-1. Run the script.
+1. Open Terminal.
+
+1. Copy, paste, and run this script.
 
     ```sh
-    $ bash eval "$(curl -fsSL https://raw.githubusercontent.com/matthewmcvickar/setup/master/initialize.sh")
+    bash eval "$(curl -fsSL https://raw.githubusercontent.com/matthewmcvickar/setup/master/initialize.sh")
     ```
 
-    This script does the following:
+    This does the following:
 
     - Installs Homebrew.
     - Sets up [dotfiles](http://github.com/matthewmcvickar/dotfiles).
