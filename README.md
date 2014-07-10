@@ -29,7 +29,7 @@ This is currently an incomplete and messy work in progress.
 1. Copy, paste, and run this script.
 
     ```sh
-    bash eval "$(curl -fsSL https://raw.githubusercontent.com/matthewmcvickar/setup/master/initialize.sh")
+    curl -s https://raw.githubusercontent.com/matthewmcvickar/setup/master/initialize.sh | bash
     ```
 
     This does the following:
