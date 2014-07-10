@@ -30,7 +30,9 @@ ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 echo " "
 echo "👉 Setting up ~/Sites folder structure."
 
-mkdir ~/Sites ~/Sites/matthewmcvickar ~/Sites/work ~/Sites/sandbox
+mkdir ~/Sites
+cd ~/Sites
+mkdir matthewmcvickar work sandbox
 
 ###
 
@@ -58,7 +60,7 @@ pbcopy < ~/.ssh/id_rsa.pub
 echo "You’ve created a new SSH key. We’ll redirect to GitHub now. Press the \
 ‘Add’ button, paste the key from your clipboard, submit, and come back here."
 
-# Go to GitHub in the browser..
+# Go to GitHub in the browser.
 open "https://github.com/settings/ssh"
 
 # Test it.
