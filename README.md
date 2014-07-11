@@ -56,6 +56,9 @@ Useful perhaps only to me, but I encourage poking around and forking.
     - Fixes permissions on `/usr/local/` and `~/.npm` to avoid problems with `sudo` and Node.
     - Installs Grunt, Bower, Node libsass and the SASS Gem.
 
+
+### 3. Finish Initialization Manually
+
 1. Create a new SSH key.
 
     ```sh
@@ -87,7 +90,7 @@ Useful perhaps only to me, but I encourage poking around and forking.
     ```
 
 
-### 3. Install Mac App Store Apps
+### 4. Install Mac App Store Apps
 
 Unfortunately, there is no way to automate downloading these.
 
@@ -99,7 +102,7 @@ Launch the App Store, sign in, and go the Purchases tab to find these apps.
 - Patterns
 
 
-### 4. Configure Desktop Apps
+### 5. Configure Desktop Apps
 
 1. **1Password**: Open preferences and set sync to iCloud.
 
@@ -124,7 +127,7 @@ Launch the App Store, sign in, and go the Purchases tab to find these apps.
     ```
 
 
-## 5. Further Configure Development Environment
+## Configure Development Environment Even More
 
 - If you need to install Ruby:
 
