@@ -142,11 +142,11 @@ Unfortunately, there is no way to automate this.
     - LiveReload
     - Patterns
 
-1. Give Divvy accessibility access in System Preferences → Security & Privacy → Accessibility.
+2. Give Divvy accessibility access in System Preferences → Security & Privacy → Accessibility.
 
-1. Launch Divvy. Quit Divvy.
+3. Launch Divvy. Quit Divvy.
 
-1. Symlink Divvy preferences to iCloud version:
+4. Symlink Divvy preferences to iCloud version:
 
     ```sh
     $ cd ~/Library/Preferences
