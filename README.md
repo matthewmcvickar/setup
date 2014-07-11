@@ -5,6 +5,8 @@ Useful perhaps only to me, but I encourage poking around and forking.
 
 ## Quick-start Development Environment
 
+**NOTE:** The following should only be done on machines that don't already have an owner who is a developer. As an administrator, you'll potentially be screwing with their setup.
+
 ### 1. Create a User
 
 1. Log into the machine as an administrator and make a new user in the *Users & Groups* preference panel:
@@ -53,6 +55,18 @@ Useful perhaps only to me, but I encourage poking around and forking.
     - Sets up Sublime Text command line tool and fixes SASS syntax highlighting.
     - Fixes permissions on `/usr/local/` and `~/.npm` to avoid problems with `sudo` and Node.
     - Installs Grunt, Bower, Node libsass and the SASS Gem.
+
+    If something goes wrong during this process, use the following to uninstall HomeBrew:
+
+    ```sh
+    $ curl -s https://gist.githubusercontent.com/mxcl/1173223/raw/a833ba44e7be8428d877e58640720ff43c59dbad/uninstall_homebrew.sh | bash
+    ```
+
+    Then open another window and delete the folders that Homebrew and Homebrew Cask created:
+
+    ```sh
+    $ sudo rm -rf /usr/local/ /opt/homebrew-cask
+    ```
 
 
 ### 3. Finish Initialization Manually
