@@ -33,19 +33,58 @@ Useful perhaps only to me, but I encourage poking around and forking.
     This does the following:
 
     - Removes all icons from the Dock.
-    - Installs Homebrew.
     - Sets up `~/Sites` directory structure.
-    - Installs and configures Git.
-    - Creates a new SSH key and aids in adding it to GitHub.
-    - Sets up [dotfiles](http://github.com/matthewmcvickar/dotfiles).
-    - Installs Homebrew command line apps from Brewfile.
-    - Installs Homebrew Cask desktop apps from Caskfile.
-    - Configures Sublime Text and adds its command line tool.
+    - Installs Homebrew and packages.
+        - Git
+        - NodeJS
+        - Ruby
+        - rbenv
+        - Z
+    - Configures Git username and email address.
+    - Installs Homebrew Cask and desktop apps:
+        - Alfred
+        - Caffeine
+        - Chrome
+        - Divvy
+        - Harvest
+        - iTerm
+        - 1 Password
+        - Sequel Pro
+        - Sublime Text
+        - TextExpander
+    - Sets up Sublime Text command line tool and fixes SASS syntax highlighting.
     - Fixes permissions on `/usr/local/` and `~/.npm` to avoid problems with `sudo` and Node.
-    - Installs Grunt.
-    - Installs Bower.
-    - Installs the SASS gem and Node's libsass globally.
-    - Sets OS X defaults.
+    - Installs Grunt, Bower, Node libsass and the SASS Gem.
+
+1. Create a new SSH key.
+
+    ```sh
+    $ ssh-keygen -t rsa -C "matthew@matthewmcvickar.com"
+    $ eval "$(ssh-agent -s)"
+    $ ssh-add ~/.ssh/id_rsa
+    $ pbcopy < ~/.ssh/id_rsa.pub
+    ```
+
+1. [Add SSH key to GitHub settings.](https://github.com/settings/ssh)
+
+1. Get dotfiles.
+
+    ```sh
+    $ cd ~/Sites/matthewmcvickar
+    $ git clone https://github.com/matthewmcvickar/dotfiles.git
+    $ cd dotfiles
+    $ bash ~/Sites/matthewmcvickar/dotfiles/build_dotfiles.sh --force
+    $ source ~/.bash_profile
+    ```
+
+1. Get Sublime Text preferences.
+
+    ```sh
+    $ git clone git@github.com:matthewmcvickar/sublime-text-preferences.git
+    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
+    $ rm -r User
+    $ ln -s ~/Sites/matthewmcvickar/sublime-text-preferences/ User
+    ```
 
 
 ### 3. Install Mac App Store Apps
@@ -90,6 +129,7 @@ Launch the App Store, sign in, and go the Purchases tab to find these apps.
 - If you need to install Ruby:
 
     ```sh
+    $ brew install rbenv ruby-build
     $ rbenv install 1.9.3-p484
     $ rbenv global 1.9.3-p484 
     $ gem update --system
