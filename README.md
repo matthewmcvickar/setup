@@ -90,7 +90,6 @@ Useful perhaps only to me, but I encourage poking around and forking.
     ````
 
 1. Open a Finder window. Open Finder preferences.
-
     - General
         - New Finder windows show: Desktop
     - Sidebar
@@ -103,7 +102,6 @@ Useful perhaps only to me, but I encourage poking around and forking.
         - Show all filename extensions.
 
 1. Go to ~/Applications. Drag the following applications to the Dock:
-
     - Chrome
     - iTerm
     - Sublime Text
