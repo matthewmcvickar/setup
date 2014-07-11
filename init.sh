@@ -81,17 +81,10 @@ echo "👉 Installing Sublime Text command line tool."
 
 ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
-echo
-echo "👉 Fixing Sublime Text SASS syntax highlighting."
-
-# Fix SASS highlighting in Sublime Text. Remove SASS from the array of file
-# types in the Ruby HAML language configuration file.
-sed -i '' '/<string>sass<\/string>/d' ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Rails/Ruby\ Haml.tmLanguage
-
 ###
 
 echo
-echo "👉 Giving you ownership of `/usr/local` so you don’t have to `sudo` NPM commands."
+echo "👉 Giving you ownership of /usr/local so you don’t have to sudo NPM commands."
 
 sudo chown -R `whoami` ~/.npm
 sudo chown -R `whoami` /usr/local/lib/node_modules

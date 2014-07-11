@@ -52,7 +52,7 @@ Useful perhaps only to me, but I encourage poking around and forking.
         - [Sequel Pro](http://sequelpro.com/)
         - [Sublime Text](http://sublimetext.com/)
         - [TextExpander](http://smilesoftware.com/TextExpander/)
-    - Sets up Sublime Text command line tool and fixes SASS syntax highlighting.
+    - Sets up Sublime Text command line tool.
     - Fixes permissions on `/usr/local/` and `~/.npm` to avoid problems with `sudo` and Node.
     - Installs Grunt, Bower, Node libsass and the SASS Gem.
 
@@ -92,15 +92,6 @@ Useful perhaps only to me, but I encourage poking around and forking.
     $ source ~/.bash_profile
     ```
 
-1. Get Sublime Text preferences.
-
-    ```sh
-    $ git clone git@github.com:matthewmcvickar/sublime-text-preferences.git
-    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
-    $ rm -r User
-    $ ln -s ~/Sites/matthewmcvickar/sublime-text-preferences/ User
-    ```
-
 
 ### 4. Install Mac App Store Apps
 
@@ -120,6 +111,12 @@ Launch the App Store, sign in, and go the Purchases tab to find these apps.
 
 1. **Alfred**: Open preferences and set sync to `~/Library/Mobile Documents/`.
 
+1. Link Homebrew Cask to Alfred:
+
+    ```sh
+    $ brew cask alfred link
+    ````
+
 1. **iTerm**: Open preferences and set sync to `~/Library/Mobile Documents/`.
 
 1. **TextExpander**: Symlink preferences to iCloud version:
@@ -136,6 +133,21 @@ Launch the App Store, sign in, and go the Purchases tab to find these apps.
     $ cd ~/Library/Preferences
     $ rm com.mizage.Divvy.plist
     $ ln -s ~/Library/Mobile\ Documents/com.mizage.Divvy.plist
+    ```
+
+1. Get Sublime Text preferences.
+
+    ```sh
+    $ git clone git@github.com:matthewmcvickar/sublime-text-preferences.git
+    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
+    $ rm -r User
+    $ ln -s ~/Sites/matthewmcvickar/sublime-text-preferences/ User
+    ```
+
+1. Fix SASS syntax highlighting in Sublime Text:
+
+    ```sh
+    sed -i '' '/<string>sass<\/string>/d' ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Rails/Ruby\ Haml.tmLanguage
     ```
 
 
