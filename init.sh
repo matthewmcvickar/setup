@@ -61,10 +61,10 @@ echo "You’ve created a new SSH key. We’ll redirect to GitHub now. Press the 
 ‘Add’ button, paste the key from your clipboard, submit, and come back here."
 
 # Go to GitHub in the browser.
-confirm "Ready to go to GitHub?" && open "https://github.com/settings/ssh"
+read -p "Ready to go to GitHub?" -n 1 -r && open "https://github.com/settings/ssh"
 
 # Test it.
-confirm "All set?" && echo "Testing GitHub connectivity now."
+read -p "All set?" -n 1 -r && echo "Testing GitHub connectivity now."
 ssh -T git@github.com && echo "\n\n👍 Great! Let’s move on."
 
 ###
