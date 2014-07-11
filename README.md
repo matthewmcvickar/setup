@@ -70,19 +70,23 @@ Useful perhaps only to me, but I encourage poking around and forking.
     ```
 
 
-### 3. Configure Desktop Apps
+### 3. Configure Finder and Desktop Apps
 
-1. Open 1Password. It will automatically sync to iCloud.
+1. Open Keyboard preferences. Check 'Use all F1, F2, etc. keys as standard function keys.'
 
-1. Get Alfred license key from 1Password.
+1. Open 1 Password. It will automatically sync to iCloud.
+
+1. Quit Safari. Open Chrome. Get Google password from 1 Password and log in to Chrome.
+
+1. Navigate here to resume following instructions. **[github.com/matthewmcvickar/setup](http://github.com/matthewmcvickar/setup)**
+
+1. Get Alfred license key from 1 Password.
 
 1. Open Alfred. Enter license key.
 
 1. In Alfred preferences, set sync to `~/Library/Mobile Documents/`.
 
-1. Quit Terminal. Open iTerm.
-
-1. Open iTerm preferences and set sync to `~/Library/Mobile Documents/`.
+1. Close Alfred preferences.
 
 1. Link Homebrew Cask to Alfred:
 
@@ -90,27 +94,41 @@ Useful perhaps only to me, but I encourage poking around and forking.
     $ brew cask alfred link
     ````
 
-1. **TextExpander**: Symlink preferences to iCloud version:
+1. Open a Finder window. Open Finder preferences.
+
+    - General
+        - New Finder windows show: Desktop
+    - Sidebar
+        - Hide All My Files.
+        - Hide AirDrop.
+        - Show home folder.
+        - Hide all under Shared.
+        - Hide Tags.
+    - Advanced
+        - Show all filename extensions.
+
+1. Go to ~/Applications. Drag the following applications to the Dock:
+
+    - Chrome
+    - iTerm
+    - Sublime Text
+
+1. Launch everything in ~/Applications.
+
+1. Quit Terminal. Open iTerm.
+
+1. Open iTerm preferences and set sync to `~/Library/Mobile Documents/`.
+
+1. Open TextExpander. Give it Accessibility access.
+
+1. Relaunch TextExpander. Enter license key from 1 Password.
+
+1. Symlink TextExpander preferences to iCloud version:
 
     ```sh
     $ cd ~/Library/Application\ Support/TextExpander/
     $ rm Settings.textexpander
     $ ln -s ~/Library/Mobile\ Documents/Settings.textexpander
-    ```
-
-1. Get Sublime Text preferences.
-
-    ```sh
-    $ git clone git@github.com:matthewmcvickar/sublime-text-preferences.git
-    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
-    $ rm -r User
-    $ ln -s ~/Sites/matthewmcvickar/sublime-text-preferences/ User
-    ```
-
-1. Fix SASS syntax highlighting in Sublime Text:
-
-    ```sh
-    sed -i '' '/<string>sass<\/string>/d' ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Rails/Ruby\ Haml.tmLanguage
     ```
 
 
@@ -134,7 +152,7 @@ Unfortunately, there is no way to automate this.
     ```
 
 
-### 5. Set Up SSH Key and Dotfiles
+### 5. Set Up SSH Key, Dotfiles, and Sublime Text Preferences
 
 1. Create a new SSH key.
 
@@ -155,6 +173,22 @@ Unfortunately, there is no way to automate this.
     $ cd dotfiles
     $ bash ~/Sites/matthewmcvickar/dotfiles/build_dotfiles.sh --force
     $ source ~/.bash_profile
+
+1. Get Sublime Text preferences.
+
+    ```sh
+    $ cd ~/Sites/matthewmcvickar/
+    $ git clone git@github.com:matthewmcvickar/sublime-text-preferences.git
+    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
+    $ rm -r User
+    $ ln -s ~/Sites/matthewmcvickar/sublime-text-preferences/ User
+    ```
+
+1. Fix SASS syntax highlighting in Sublime Text:
+
+    ```sh
+    sed -i '' '/<string>sass<\/string>/d' ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Rails/Ruby\ Haml.tmLanguage
+    ```
     ```
 
 
