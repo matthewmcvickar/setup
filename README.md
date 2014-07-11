@@ -71,9 +71,11 @@ Useful perhaps only to me, but I encourage poking around and forking.
 
 ### 3. Configure Desktop Apps
 
-1. **1Password**: Open preferences and set sync to iCloud.
+1. Open Alfred. Open preferences and set sync to `~/Library/Mobile Documents/`.
 
-1. **Alfred**: Open preferences and set sync to `~/Library/Mobile Documents/`.
+1. Quit Terminal. Open iTerm.
+
+1. Open iTerm preferences and set sync to `~/Library/Mobile Documents/`.
 
 1. Link Homebrew Cask to Alfred:
 
@@ -81,7 +83,7 @@ Useful perhaps only to me, but I encourage poking around and forking.
     $ brew cask alfred link
     ````
 
-1. **iTerm**: Open preferences and set sync to `~/Library/Mobile Documents/`.
+1. **1Password**: Open preferences and set sync to iCloud.
 
 1. **TextExpander**: Symlink preferences to iCloud version:
 
