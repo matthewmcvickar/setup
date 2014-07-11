@@ -69,19 +69,7 @@ Useful perhaps only to me, but I encourage poking around and forking.
     ```
 
 
-### 3. Install Mac App Store Apps
-
-Unfortunately, there is no way to automate downloading these.
-
-Launch the App Store, sign in, and go the Purchases tab to find these apps.
-
-- Divvy
-- xScope
-- LiveReload
-- Patterns
-
-
-### 4. Configure Desktop Apps
+### 3. Configure Desktop Apps
 
 1. **1Password**: Open preferences and set sync to iCloud.
 
@@ -103,14 +91,6 @@ Launch the App Store, sign in, and go the Purchases tab to find these apps.
     $ ln -s ~/Library/Mobile\ Documents/Settings.textexpander
     ```
 
-1. **Divvy**: Symlink preferences to iCloud version:
-
-    ```sh
-    $ cd ~/Library/Preferences
-    $ rm com.mizage.Divvy.plist
-    $ ln -s ~/Library/Mobile\ Documents/com.mizage.Divvy.plist
-    ```
-
 1. Get Sublime Text preferences.
 
     ```sh
@@ -124,6 +104,26 @@ Launch the App Store, sign in, and go the Purchases tab to find these apps.
 
     ```sh
     sed -i '' '/<string>sass<\/string>/d' ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Rails/Ruby\ Haml.tmLanguage
+    ```
+
+
+### 4. Install Mac App Store Apps
+
+Unfortunately, there is no way to automate this.
+
+1. Launch the App Store, sign in, and go the Purchases tab to find these apps.
+
+    - Divvy
+    - xScope
+    - LiveReload
+    - Patterns
+
+1. Symlink Divvy preferences to iCloud version:
+
+    ```sh
+    $ cd ~/Library/Preferences
+    $ rm com.mizage.Divvy.plist
+    $ ln -s ~/Library/Mobile\ Documents/com.mizage.Divvy.plist
     ```
 
 
