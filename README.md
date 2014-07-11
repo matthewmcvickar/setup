@@ -46,7 +46,6 @@ Useful perhaps only to me, but I encourage poking around and forking.
         - [Alfred](http://alfredapp.com/)
         - [Caffeine](http://lightheadsw.com/caffeine/)
         - [Chrome](https://google.com/intl/en-US/chrome/browser/)
-        - [Divvy](http://mizage.com/divvy/)
         - [Harvest](http://getharvest.com/mac/)
         - [iTerm](http://iterm2.com/)
         - [1 Password](https://agilebits.com/onepassword/)
@@ -115,7 +114,7 @@ Useful perhaps only to me, but I encourage poking around and forking.
 
 1. Launch everything in ~/Applications.
 
-1. Quit Terminal. Open iTerm.
+1. Quit Terminal. Open iTerm. Update it. Relaunch.
 
 1. Open iTerm preferences and set sync to `~/Library/Mobile Documents/`.
 
@@ -143,6 +142,10 @@ Unfortunately, there is no way to automate this.
     - LiveReload
     - Patterns
 
+1. Give Divvy accessbility access in System Preferences → Security & Privacy → Accessibility.
+
+1. Launch Divvy. Quit Divvy.
+
 1. Symlink Divvy preferences to iCloud version:
 
     ```sh
@@ -150,6 +153,8 @@ Unfortunately, there is no way to automate this.
     $ rm com.mizage.Divvy.plist
     $ ln -s ~/Library/Mobile\ Documents/com.mizage.Divvy.plist
     ```
+
+1. **Restart!** (If you don't, Divvy will keep ignoring and then overwriting the preferences file for some reason!)
 
 
 ### 5. Set Up SSH Key, Dotfiles, and Sublime Text Preferences
@@ -174,6 +179,8 @@ Unfortunately, there is no way to automate this.
     $ bash ~/Sites/matthewmcvickar/dotfiles/build_dotfiles.sh --force
     $ source ~/.bash_profile
 
+1. Launch Sublime Text. Quit Sublime Text.
+
 1. Get Sublime Text preferences.
 
     ```sh
@@ -189,7 +196,21 @@ Unfortunately, there is no way to automate this.
     ```sh
     sed -i '' '/<string>sass<\/string>/d' ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Rails/Ruby\ Haml.tmLanguage
     ```
+
+1. Launch Sublime Text.
+
+
+## Set OS X defaults
+
+1. (su)Do it!
+
+    ```sh
+    $ cd ~/Sites/matthewmcvickar/dotfiles
+    $ ./.osx
     ```
+
+1. Restart!
+
 
 
 ## Configure Development Environment Even More
@@ -202,9 +223,6 @@ Unfortunately, there is no way to automate this.
     $ rbenv global 1.9.3-p484 
     $ gem update --system
     ```
-
-
----
 
 
 ## Full Setup
