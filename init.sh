@@ -33,8 +33,8 @@ echo
 echo "👉 Installing Homebrew."
 
 ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-sudo chown -R `whoami` /usr/local/include
 brew doctor
+# sudo chown -R `whoami` /usr/local/include
 
 ###
 
@@ -103,7 +103,7 @@ echo "👉 Installing Grunt, Bower, Node libsass, and SASS Gem."
 npm install -g grunt-cli
 npm install -g bower
 npm install -g node-sass
-gem install sass
+sudo gem install sass
 
 ###
 
