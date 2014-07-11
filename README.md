@@ -142,7 +142,7 @@ Unfortunately, there is no way to automate this.
     - LiveReload
     - Patterns
 
-1. Give Divvy accessbility access in System Preferences → Security & Privacy → Accessibility.
+1. Give Divvy accessibility access in System Preferences → Security & Privacy → Accessibility.
 
 1. Launch Divvy. Quit Divvy.
 
