@@ -35,23 +35,21 @@ Useful perhaps only to me, but I encourage poking around and forking.
     - Removes all icons from the Dock.
     - Sets up `~/Sites` directory structure.
     - Installs Homebrew and packages.
-        - Git
-        - NodeJS
-        - Ruby
-        - rbenv
-        - Z
+        - [Git](http://git-scm.com/)
+        - [NodeJS](http://nodejs.org/)
+        - [Z](https://github.com/rupa/z)
     - Configures Git username and email address.
     - Installs Homebrew Cask and desktop apps:
-        - Alfred
-        - Caffeine
-        - Chrome
-        - Divvy
-        - Harvest
-        - iTerm
-        - 1 Password
-        - Sequel Pro
-        - Sublime Text
-        - TextExpander
+        - [Alfred](http://alfredapp.com/)
+        - [Caffeine](http://lightheadsw.com/caffeine/)
+        - [Chrome](https://google.com/intl/en-US/chrome/browser/)
+        - [Divvy](http://mizage.com/divvy/)
+        - [Harvest](http://getharvest.com/mac/)
+        - [iTerm](http://iterm2.com/)
+        - [1 Password](https://agilebits.com/onepassword/)
+        - [Sequel Pro](http://sequelpro.com/)
+        - [Sublime Text](http://sublimetext.com/)
+        - [TextExpander](http://smilesoftware.com/TextExpander/)
     - Sets up Sublime Text command line tool and fixes SASS syntax highlighting.
     - Fixes permissions on `/usr/local/` and `~/.npm` to avoid problems with `sudo` and Node.
     - Installs Grunt, Bower, Node libsass and the SASS Gem.
@@ -188,4 +186,4 @@ Copy to new home folder:
 
 ### Adobe Creative Cloud
 
-- [Download Creative Cloud](http://www.adobe.com/products/creativecloud.html)
+- [Download Creative Cloud](http://adobe.com/products/creativecloud.html)

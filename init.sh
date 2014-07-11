@@ -55,16 +55,15 @@ git config --global user.name "Matthew McVickar"
 echo
 echo "👉 Installing Homebrew Cask and desktop apps: Alfred, Caffeine, Divvy, Harvest, 1 Password, TextExpander, Google Chrome, iTerm, Sequel Pro, and Sublime Text."
 brew install caskroom/cask/brew-cask
-brew cask install --appdir=/Applications alfred
-brew cask install --appdir=/Applications caffeine
-brew cask install --appdir=/Applications divvy
-brew cask install --appdir=/Applications harvest
-brew cask install --appdir=/Applications onepassword
-brew cask install --appdir=/Applications textexpander
-brew cask install --appdir=/Applications google-chrome
-brew cask install --appdir=/Applications iterm2
-brew cask install --appdir=/Applications sequel-pro
-brew cask install --appdir=/Applications sublime-text
+brew cask install alfred
+brew cask install caffeine
+brew cask install divvy
+brew cask install harvest
+brew cask install onepassword
+brew cask install textexpander
+brew cask install google-chrome
+brew cask install iterm2
+brew cask install sublime-text
 
 ###
 
