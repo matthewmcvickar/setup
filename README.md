@@ -36,6 +36,7 @@ Useful perhaps only to me, but I encourage poking around and forking.
 
     - Removes all icons from the Dock.
     - Sets up `~/Sites` directory structure.
+    - Unhides `~/Library`.
     - Installs Homebrew and packages.
         - [Git](http://git-scm.com/)
         - [NodeJS](http://nodejs.org/)
@@ -71,7 +72,13 @@ Useful perhaps only to me, but I encourage poking around and forking.
 
 ### 3. Configure Desktop Apps
 
-1. Open Alfred. Open preferences and set sync to `~/Library/Mobile Documents/`.
+1. Open 1Password. It will automatically sync to iCloud.
+
+1. Get Alfred license key from 1Password.
+
+1. Open Alfred. Enter license key.
+
+1. In Alfred preferences, set sync to `~/Library/Mobile Documents/`.
 
 1. Quit Terminal. Open iTerm.
 
@@ -82,8 +89,6 @@ Useful perhaps only to me, but I encourage poking around and forking.
     ```sh
     $ brew cask alfred link
     ````
-
-1. **1Password**: Open preferences and set sync to iCloud.
 
 1. **TextExpander**: Symlink preferences to iCloud version:
 

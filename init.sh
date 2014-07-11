@@ -11,7 +11,7 @@ sudo -v
 ###
 
 echo
-echo "👉 Clearing out your Dock and emptying ~/Downloads."
+echo "👉 Emptying your Dock and the Downloads folder."
 
 defaults write com.apple.dock persistent-apps -array ""
 killall Dock
@@ -25,7 +25,9 @@ mkdir ~/Sites
 cd ~/Sites
 mkdir matthewmcvickar work sandbox
 
-###
+echo
+echo "👉 Making ~/Library visible."
+chflags nohidden ~/Library
 
 ###
 
