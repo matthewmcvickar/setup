@@ -69,31 +69,7 @@ Useful perhaps only to me, but I encourage poking around and forking.
     ```
 
 
-### 3. Finish Initialization Manually
-
-1. Create a new SSH key.
-
-    ```sh
-    $ ssh-keygen -t rsa -C "matthew@matthewmcvickar.com"
-    $ eval "$(ssh-agent -s)"
-    $ ssh-add ~/.ssh/id_rsa
-    $ pbcopy < ~/.ssh/id_rsa.pub
-    ```
-
-1. [Add SSH key to GitHub settings.](https://github.com/settings/ssh)
-
-1. Get dotfiles.
-
-    ```sh
-    $ cd ~/Sites/matthewmcvickar
-    $ git clone https://github.com/matthewmcvickar/dotfiles.git
-    $ cd dotfiles
-    $ bash ~/Sites/matthewmcvickar/dotfiles/build_dotfiles.sh --force
-    $ source ~/.bash_profile
-    ```
-
-
-### 4. Install Mac App Store Apps
+### 3. Install Mac App Store Apps
 
 Unfortunately, there is no way to automate downloading these.
 
@@ -105,7 +81,7 @@ Launch the App Store, sign in, and go the Purchases tab to find these apps.
 - Patterns
 
 
-### 5. Configure Desktop Apps
+### 4. Configure Desktop Apps
 
 1. **1Password**: Open preferences and set sync to iCloud.
 
@@ -148,6 +124,30 @@ Launch the App Store, sign in, and go the Purchases tab to find these apps.
 
     ```sh
     sed -i '' '/<string>sass<\/string>/d' ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Rails/Ruby\ Haml.tmLanguage
+    ```
+
+
+### 5. Set Up SSH Key and Dotfiles
+
+1. Create a new SSH key.
+
+    ```sh
+    $ ssh-keygen -t rsa -C "matthew@matthewmcvickar.com"
+    $ eval "$(ssh-agent -s)"
+    $ ssh-add ~/.ssh/id_rsa
+    $ pbcopy < ~/.ssh/id_rsa.pub
+    ```
+
+1. [Add SSH key to GitHub settings.](https://github.com/settings/ssh)
+
+1. Get dotfiles.
+
+    ```sh
+    $ cd ~/Sites/matthewmcvickar
+    $ git clone https://github.com/matthewmcvickar/dotfiles.git
+    $ cd dotfiles
+    $ bash ~/Sites/matthewmcvickar/dotfiles/build_dotfiles.sh --force
+    $ source ~/.bash_profile
     ```
 
 
