@@ -79,13 +79,9 @@ Useful perhaps only to me, but I encourage poking around and forking.
 
 1. Navigate here to resume following instructions. **[github.com/matthewmcvickar/setup](http://github.com/matthewmcvickar/setup)**
 
-1. Get Alfred license key from 1 Password.
+1. Get Alfred license key from 1 Password. Open Alfred. Enter license key.
 
-1. Open Alfred. Enter license key.
-
-1. In Alfred preferences, set sync to `~/Library/Mobile Documents/`.
-
-1. Close Alfred preferences.
+1. In Alfred preferences, set sync to `~/Library/Mobile Documents/`. Close Alfred preferences.
 
 1. Link Homebrew Cask to Alfred:
 
