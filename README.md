@@ -136,17 +136,16 @@ Useful perhaps only to me, but I encourage poking around and forking.
 Unfortunately, there is no way to automate this.
 
 1. Launch the App Store, sign in, and go the Purchases tab to find these apps.
-
     - Divvy
     - xScope
     - LiveReload
     - Patterns
 
-2. Give Divvy accessibility access in System Preferences → Security & Privacy → Accessibility.
+1. Give Divvy accessibility access in System Preferences → Security & Privacy → Accessibility.
 
-3. Launch Divvy. Quit Divvy.
+1. Launch Divvy. Quit Divvy.
 
-4. Symlink Divvy preferences to iCloud version:
+1. Symlink Divvy preferences to iCloud version:
 
     ```sh
     $ cd ~/Library/Preferences
