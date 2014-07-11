@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 # This script sets up the basics for a development environment on a new computer.
 
@@ -49,7 +49,7 @@ echo " "
 echo "👉 Creating a new SSH key."
 
 # Generate key.
-ssh-keygen -t rsa -C "matthew@matthewmcvickar.com" && eval "$(ssh-agent -s)"
+echo -e "\n" | ssh-keygen -t rsa -N "" -C "matthew@matthewmcvickar.com" && eval "$(ssh-agent -s)"
 
 # Add key to ssh-agent.
 ssh-add ~/.ssh/id_rsa
