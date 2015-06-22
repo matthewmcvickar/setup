@@ -184,14 +184,14 @@ Unfortunately, there is no way to automate this.
     $ source ~/.bash_profile
     ```
 
-1. Launch Sublime Text. Quit Sublime Text.
+1. Launch Sublime Text. Then quit Sublime Text.
 
 1. Get Sublime Text preferences.
 
     ```sh
     $ cd ~/Sites/matthewmcvickar/
     $ git clone git@github.com:matthewmcvickar/sublime-text-preferences.git
-    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages
+    $ cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages
     $ rm -r User
     $ ln -s ~/Sites/matthewmcvickar/sublime-text-preferences/ User
     ```
@@ -199,7 +199,7 @@ Unfortunately, there is no way to automate this.
 1. Fix SASS syntax highlighting in Sublime Text:
 
     ```sh
-    sed -i '' '/<string>sass<\/string>/d' ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Rails/Ruby\ Haml.tmLanguage
+    sed -i '' '/<string>sass<\/string>/d' ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Rails/Ruby\ Haml.tmLanguage
     ```
 
 1. Launch Sublime Text.
@@ -242,7 +242,7 @@ When you are doing more than just working on the machine.
 There is no way to automate this.
 
 - Fantastical
-- ByWord
+- Byword
 - Day One
 - Joystick Mapper
 - Melo
@@ -264,9 +264,9 @@ Copy to new home folder:
   - Scripts
   
 
-### iPhoto
+### Photos.app
 
-- Launch iPhoto while holding ⌥. Select iPhoto library on ‘Portable’ disk.
+- Launch Photos.app while holding ⌥. Select Photos.app library on ‘Portable’ disk.
 
 
 ### MS Office
